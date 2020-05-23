@@ -184,11 +184,11 @@ def evaluate_model(model, X_test, Y_test, category_names):
     # Extremely long output
     # Work In Progress: Save Output as Text file!
     
-    #Y_pred = pd.DataFrame(Y_pred, columns = Y_test.columns)
+    Y_pred = pd.DataFrame(Y_pred, columns = Y_test.columns)
     
-    #for column in Y_test.columns:
-    #    print('Model Performance with Category: {}'.format(column))
-    #    print(classification_report(Y_test[column],Y_pred[column]))
+    for column in Y_test.columns:
+       print('Model Performance with Category: {}'.format(column))
+       print(classification_report(Y_test[column],Y_pred[column]))
     pass
 
 
